@@ -205,7 +205,7 @@ appBar: AppBar(
            style: TextStyle(
             color: Colors. grey,
             fontWeight: FontWeight.bold,
-            fontSize: 15,
+            fontSize: 12,
            ),
             textAlign: TextAlign.center,
           ),
@@ -222,7 +222,7 @@ appBar: AppBar(
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.grey,
             foregroundColor: Colors.black,
-            padding: const EdgeInsets.symmetric(vertical: 15),
+            padding: const EdgeInsets.symmetric(vertical: 0),
               shape: RoundedRectangleBorder( // 👈 This makes it square
     borderRadius: BorderRadius.zero,
   ),
@@ -232,7 +232,7 @@ appBar: AppBar(
             'YES. BLACKLIST',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 16,
+              fontSize: 10,
             ),
           ),
                ),
@@ -246,7 +246,7 @@ appBar: AppBar(
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.amber,
             foregroundColor: Colors.black,
-            padding: const EdgeInsets.symmetric(vertical: 15),
+            padding: const EdgeInsets.symmetric(vertical: 0),
             shape: RoundedRectangleBorder( // 👈 This makes it square
     borderRadius: BorderRadius.zero,
   ),

@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:purchase_orderscreen/main.dart';
 import 'package:purchase_orderscreen/view_suppliers/update_firmdetails.dart';
 //import '../view_suppliers.dart/view_suppliers/update_firmdetails.dart';
 //import 'package:purchase_orderscreen/view_suppliers/update_firmdetails.dart';
+
+void main() {
+  runApp(const MyApp());
+}
 
 
 
