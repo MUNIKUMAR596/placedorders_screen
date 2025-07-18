@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:purchase_orderscreen/main.dart';
+void main() {
+  runApp(const MyApp());
+}
 
 class UpdateFirmdetails extends StatefulWidget {
   const UpdateFirmdetails({super.key});
@@ -179,92 +182,96 @@ appBar: AppBar(
         showDialog(
   context: context,
   builder: (context) => Dialog(
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Container(
-          width: double.infinity,
-          padding: const EdgeInsets.all(16),
-          color: Colors.amber,
-          child: Center(
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+    child: SizedBox(
+      width: MediaQuery.of(context).size.width *0.9,
+      height: 230,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.all(16),
+            color: Colors.amber,
+            child: Center(
+              child: Text(
+               'BLACK LIST?',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
             child: Text(
-             'BLACK LIST?',
-              style: const TextStyle(
-                color: Colors.white,
+             ' You are about to blacklist this \n Firm(M/S LAXMI CEMENT PRODUCTS). \n when firm is blacklisted, Firm user \n cannot acess mobile app',
+             style: TextStyle(
+              color: Colors. grey,
+              fontWeight: FontWeight.bold,
+              fontSize: 12,
+             ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+         Padding(
+           padding: const EdgeInsets.all(8.0),
+           child: Row(
+             children: [
+               Expanded(
+                 child: ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.grey,
+              foregroundColor: Colors.black,
+              padding: const EdgeInsets.symmetric(vertical: 0),
+                shape: RoundedRectangleBorder( // 👈 This makes it square
+      borderRadius: BorderRadius.zero,
+        ),
+              
+            ),
+            child: const Text(
+              'YES. BLACKLIST',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 10,
+              ),
+            ),
+                 ),
+               ),
+               const SizedBox(width: 10), // spacing between buttons
+               Expanded(
+                 child: ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.amber,
+              foregroundColor: Colors.black,
+              padding: const EdgeInsets.symmetric(vertical: 0),
+              shape: RoundedRectangleBorder( // 👈 This makes it square
+      borderRadius: BorderRadius.zero,
+        ),
+            ),
+            child: const Text(
+              'CANCEL',
+              style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
             ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Text(
-           ' You are about to blacklist this \n Firm(M/S LAXMI CEMENT PRODUCTS). \n when firm is blacklisted, Firm user \n cannot acess mobile app',
-           style: TextStyle(
-            color: Colors. grey,
-            fontWeight: FontWeight.bold,
-            fontSize: 12,
+                 ),
+               ),
+             ],
            ),
-            textAlign: TextAlign.center,
-          ),
-        ),
-       Padding(
-         padding: const EdgeInsets.all(8.0),
-         child: Row(
-           children: [
-             Expanded(
-               child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.grey,
-            foregroundColor: Colors.black,
-            padding: const EdgeInsets.symmetric(vertical: 0),
-              shape: RoundedRectangleBorder( // 👈 This makes it square
-    borderRadius: BorderRadius.zero,
-  ),
-            
-          ),
-          child: const Text(
-            'YES. BLACKLIST',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 10,
-            ),
-          ),
-               ),
-             ),
-             const SizedBox(width: 10), // spacing between buttons
-             Expanded(
-               child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.amber,
-            foregroundColor: Colors.black,
-            padding: const EdgeInsets.symmetric(vertical: 0),
-            shape: RoundedRectangleBorder( // 👈 This makes it square
-    borderRadius: BorderRadius.zero,
-  ),
-          ),
-          child: const Text(
-            'CANCEL',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-            ),
-          ),
-               ),
-             ),
-           ],
          ),
-       ),
-
-      ],
+      
+        ],
+      ),
     ),
   ),
 );
@@ -285,7 +292,8 @@ appBar: AppBar(
                       backgroundColor: Colors.blue,
                       foregroundColor: Colors.white
                      ),),
-                  )
+                  ),
+                  
             ],
           ),
         ),
