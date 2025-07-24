@@ -3,7 +3,8 @@ import 'package:purchase_orderscreen/LOADCHANGE/load_changerequest.dart';
 import 'package:purchase_orderscreen/LTMT/LTMT_menu.dart';
 import 'package:purchase_orderscreen/Meseva_Alertdialouge/list_dialougescreen.dart';
 import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/homepage.dart';
-import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/npdecl_employee.dart';
+import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/HTMETERS/npdecl_employee.dart';
+import 'package:purchase_orderscreen/TONGTESTERREADINGS/Tongtester_readings.dart';
 import 'package:purchase_orderscreen/purchase_scre.dart/create_purchase_order.dart';
 import 'package:purchase_orderscreen/purchase_scre.dart/purchase_orders.dart';
 import 'package:purchase_orderscreen/view_po_screen.dart/purchase_orders.dart';
@@ -25,7 +26,9 @@ class MyApp extends StatelessWidget {
       
      
       home:
-      Homepage()
+      TongtesterReadings()
+
+      //Homepage()
       //NpdeclEmployee()
       // ListDialougescreen()
       //LoadChangerequest()
