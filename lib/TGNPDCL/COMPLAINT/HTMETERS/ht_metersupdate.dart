@@ -1,4 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+class monthyearformat extends TextInputFormatter{
+  TextEditingValue formatEditUpdate(
+    TextEditingValue oldvalue,
+    TextEditingValue newvalue
+  ){
+    String date=newvalue.text.replaceAll(RegExp(r'[^0-9]'), '');
+    if (date.length>6){
+      date=date.substring(0,6);
+    }
+    String showformat='';
+    if (date.length >= 2){
+      showformat=date.substring(0,2);
+    }
+    if (date.length > 2){
+      showformat += '/' + date.substring(2);
+    }
+    else{
+      showformat=date;
+    }
+    return TextEditingValue(
+      text: showformat
+    );
+  }
+
+}
 
 class HtMetersupdate extends StatefulWidget {
   const HtMetersupdate({super.key});
@@ -16,7 +43,7 @@ class HtMetersupdatesState extends State<HtMetersupdate> {
       context: context,
       initialDate: DateTime.now(),         // current date
       firstDate: DateTime(2000),           // lower bound
-      lastDate: DateTime(2100),            // upper bound
+      lastDate: DateTime.now(),            // upper bound
     );
 
     if (pickedDate != null) {
@@ -631,6 +658,9 @@ Card(
             ),
             Expanded(
               child: TextField(
+                inputFormatters: [
+                  monthyearformat()
+                ],
                 decoration: InputDecoration(
                   hint: Text('MM/YYYY',
                   textAlign: TextAlign.end,)
