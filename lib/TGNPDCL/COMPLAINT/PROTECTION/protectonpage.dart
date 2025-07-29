@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/PROTECTION/LVbreaker_prtpage.dart';
-import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/PROTECTION/workprotection_details.dart';
+import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/PROTECTION/acsupplyfailue_workprotection_details.dart';
 
 class Protectonpage extends StatefulWidget {
   const Protectonpage({super.key});

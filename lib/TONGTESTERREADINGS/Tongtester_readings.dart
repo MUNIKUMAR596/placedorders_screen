@@ -13,10 +13,8 @@ class _TongtesterReadingsState extends State<TongtesterReadings> {
 
   String Structurecode = '12289-UJLIBASE-SS-0010';
   final List<String> selectstructurecode = [
-    '12289-UJLIBASE-SS-0010',
-    
+    '12289-UJLIBASE-SS-0010', 
   ];
-
   void _structuredialoue() {
     showDialog(
       context: context,

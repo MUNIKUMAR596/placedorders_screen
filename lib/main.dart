@@ -26,9 +26,10 @@ class MyApp extends StatelessWidget {
       
      
       home:
-      TongtesterReadings()
+      //TongtesterReadings()
 
-      //Homepage()
+      Homepage() /// TGNPCL HOME PAGE
+     
       //NpdeclEmployee()
       // ListDialougescreen()
       //LoadChangerequest()
