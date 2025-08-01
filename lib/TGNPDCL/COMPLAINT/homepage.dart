@@ -3,6 +3,8 @@ import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/HTMETERS/ht_metersupdate.
 import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/HTMETERS/npdecl_employee.dart';
 import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/PROTECTION/protectonpage.dart';
 import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/htmeters_htconv_tosolar.dart';
+import 'package:purchase_orderscreen/TGNPDCL/newservice_htmeters.dart';
+import 'package:purchase_orderscreen/TGNPDCL/onetimeregistration.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -32,34 +34,52 @@ class _HomepageState extends State<Homepage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            
+
           ],
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, 
-              MaterialPageRoute(builder: (context) => NpdeclEmployee()));
-            }, child: Text('HT Meters')),
-            SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, 
-              MaterialPageRoute(builder: (context) => Protectonpage()));
-            }, child:Text('protection PAGE') ),
-            SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(onPressed: (){
-              Navigator.push(context, 
-              MaterialPageRoute(builder: (context) => HtmetersHtconvTosolar()));
-            }, child:Text('HT_CONV_HT_TO_SOLAR ') )
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => NpdeclEmployee()));
+              }, child: Text('HT Meters')),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => Protectonpage()));
+              }, child:Text('protection PAGE') ),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => HtmetersHtconvTosolar()));
+              },
+              
+               child:Text('HT_CONV_HT_TO_SOLAR ') ),
+               SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => NewserviceHtmeters()));
+              }, child:Text('HT_meters_newservice') ),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => Onetimeregistration()));
+              }, child:Text('ONETIMEREGISTATIONPAGE') )
+            ],                   
+          ),
         ),
       ),
 

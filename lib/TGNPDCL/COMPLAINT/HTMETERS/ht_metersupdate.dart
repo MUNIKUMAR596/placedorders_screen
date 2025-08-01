@@ -46,7 +46,7 @@ class HtMetersupdatesState extends State<HtMetersupdate> {
       lastDate: DateTime.now(),            // upper bound
     );
 
-    if (pickedDate != null) {
+    if (pickedDate != null)  {
       String formattedDate = "${pickedDate.day}/${pickedDate.month}/${pickedDate.year}";
       setState(() {
         _dateController.text = formattedDate; // set date in TextField
@@ -80,8 +80,6 @@ List<String> workdetails = [
   'Meter Defective-Meter Replaced',
   'CTPT Defective-CTOT Replaced',
 ];
-
-
   //METER DETAILS AS PER EBS
   String? make='SELECT';
   final List<String> metermake=['SELECT','SECURI'];
@@ -147,7 +145,7 @@ String? ctptmake='SELECT';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar( 
         leading: IconButton(
   onPressed: () {
     Navigator.pop(context);

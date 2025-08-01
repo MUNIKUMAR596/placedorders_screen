@@ -93,7 +93,7 @@ class HtMetersupdatesState extends State<HtmetersHtconvTosolar> {
 
   final List<String> selectdivision = ['SELECT', 'HANAMKONDA TOWN', 'HANAMKONDA RURAL'];
   final List<String> selectsubdivision = ['SELECT', 'KAZIPET', 'HANAMKONDA', 'NAYEEMNAGAR'];
-    final List<String> selecsection = ['SELECT', 'SUBEDARI', 'CHOWRASTHA/HNK', 'NAKKALAGUTTA','MACHILIBAZAR'];
+    final List<String> selecsection = ['SELECT', 'NIT', 'MADIKONDA', 'KAZIPET','KADIPIKONDA','WADDEPALLY'];
     final List<String> selectpremises = ['SELECT','Consumer Service', 'SubStation Service'];
     // SERVICE DETAILS
  String? service = '12203-15116816517705';
@@ -401,9 +401,10 @@ Text(
                           });
                          }:null),
                           const SizedBox(height: 4),
-                      const Text('Select Date of inspection',
+                      const Text('Select Date of Conversion',
                       style: TextStyle(
-                            fontWeight: FontWeight.bold
+                            fontWeight: FontWeight.bold,
+                            color: Colors.indigo
                           ),),
                       SizedBox(
                         height: 4,
@@ -416,12 +417,16 @@ Text(
                     },
                     decoration: InputDecoration(
                       labelText: _dateController.text.isEmpty ? "TAP HERE" : null,
+                      labelStyle: TextStyle(
+                        color: _dateController.text.isEmpty ? Colors.red : null,
+                      )
                     ),
                   ),
                            const SizedBox(height: 4),
                       const Text('NATURE OF PREMISES',
                       style: TextStyle(
-                        fontWeight: FontWeight.bold
+                        fontWeight: FontWeight.bold,
+                        color: Colors.indigo
                       ),),
                       SizedBox(
                         height: 4,
@@ -763,7 +768,7 @@ Card(
   ),
 ),
 
-//// CTPT DETAILS
+//// NEW CTPT DETAILS
 
 SizedBox(
   height: 6,
@@ -1417,6 +1422,8 @@ Column(
     SizedBox(
   height: 6,
 ),
+
+//  NEW CTPT DETAILS
 Card(
   child: Padding(
     padding: const EdgeInsets.all(12.0),
@@ -1518,6 +1525,7 @@ Card(
 SizedBox(
 height: 10,
 ),
+// NEW METER READING DETAILS
 Card(
 child: Padding(
   padding: const EdgeInsets.all(12.0),

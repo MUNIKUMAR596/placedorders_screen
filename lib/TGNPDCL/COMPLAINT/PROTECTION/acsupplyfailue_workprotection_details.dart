@@ -399,7 +399,7 @@ Map<int, int> selectedsparesreqired = {}; // index: quantity
                                           selectedindex=index;
                                         });
                                       },                                      
-                                       child: Row(
+                                       child: Row(  
                                          children: [
                                            Icon(
                                                isselected ? Icons.check_box : Icons.check_box_outline_blank,
