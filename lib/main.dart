@@ -5,7 +5,7 @@ import 'package:purchase_orderscreen/Meseva_Alertdialouge/list_dialougescreen.da
 import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/homepage.dart';
 import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/HTMETERS/npdecl_employee.dart';
 import 'package:purchase_orderscreen/TONGTESTERREADINGS/Tongtester_readings.dart';
-import 'package:purchase_orderscreen/extrause.dart';
+import 'package:purchase_orderscreen/empty.dart';
 import 'package:purchase_orderscreen/processsingleindent.dart';
 import 'package:purchase_orderscreen/purchase_scre.dart/create_purchase_order.dart';
 import 'package:purchase_orderscreen/purchase_scre.dart/purchase_orders.dart';
@@ -27,14 +27,14 @@ class MyApp extends StatelessWidget {
       title: 'purchasse order screen',
       
      
-      home:
-      //process()
-      Processsingleindent()
+      home: Homepage()
+   
+      //Processsingleindent()
     
       
       //TongtesterReadings()
 
-     // Homepage() /// TGNPCL HOME PAGE
+   /// TGNPCL HOME PAGE
      
       //NpdeclEmployee()
       // ListDialougescreen()

@@ -3,6 +3,7 @@ import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/HTMETERS/ht_metersupdate.
 import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/HTMETERS/npdecl_employee.dart';
 import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/PROTECTION/protectonpage.dart';
 import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/htmeters_htconv_tosolar.dart';
+import 'package:purchase_orderscreen/TGNPDCL/createdtr_strucutre.dart';
 import 'package:purchase_orderscreen/TGNPDCL/newservice_htmeters.dart';
 import 'package:purchase_orderscreen/TGNPDCL/onetimeregistration.dart';
 
@@ -77,7 +78,14 @@ class _HomepageState extends State<Homepage> {
               ElevatedButton(onPressed: (){
                 Navigator.push(context, 
                 MaterialPageRoute(builder: (context) => Onetimeregistration()));
-              }, child:Text('ONETIMEREGISTATIONPAGE') )
+              }, child:Text('ONETIMEREGISTATIONPAGE') ),
+                SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => CreatedtrStrucutre()));
+              }, child:Text('CreateDTRStrucutre') )
             ],                   
           ),
         ),
