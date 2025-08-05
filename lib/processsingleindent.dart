@@ -41,9 +41,6 @@ final List<String> selectserviceorders=['22/1147(7632|RDY Qty:0|8m/140)','220000
 TextEditingController approveQtyController = TextEditingController();
 bool showRemarks = false;
 
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +52,8 @@ bool showRemarks = false;
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ElevatedButton(
-            onPressed: (){  
+            onPressed: (){ 
+              Navigator.pop(context);
               showDialog(
                 context: context, 
                 builder: (BuildContext context){

@@ -5,6 +5,7 @@ import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/PROTECTION/protectonpage.
 import 'package:purchase_orderscreen/TGNPDCL/COMPLAINT/htmeters_htconv_tosolar.dart';
 import 'package:purchase_orderscreen/TGNPDCL/createdtr_strucutre.dart';
 import 'package:purchase_orderscreen/TGNPDCL/newservice_htmeters.dart';
+import 'package:purchase_orderscreen/TGNPDCL/NPDCLEMPLOYEE2025/npdclemployee_aug2025.dart';
 import 'package:purchase_orderscreen/TGNPDCL/onetimeregistration.dart';
 
 class Homepage extends StatefulWidget {
@@ -85,7 +86,14 @@ class _HomepageState extends State<Homepage> {
               ElevatedButton(onPressed: (){
                 Navigator.push(context, 
                 MaterialPageRoute(builder: (context) => CreatedtrStrucutre()));
-              }, child:Text('CreateDTRStrucutre') )
+              }, child:Text('CreateDTRStrucutre') ),
+                SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context) => NpdclemployeeAug2025()));
+              }, child:Text('NPDCLEMPLOYEEAUG2025') )
             ],                   
           ),
         ),
